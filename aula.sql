@@ -1,0 +1,31 @@
+CREATE DATABASE pet_tech;
+
+USE pet_tech;
+
+CREATE TABLE IF NOT EXISTS tutor (
+id INT NOT NULL auto_increment,
+nome VARCHAR(100) NOT NULL,
+endereço TEXT,
+telefone VARCHAR(15) NOT NULL,
+cpf VARCHAR(11) NOT NULL,
+email VARCHAR(100) NOT NULL,
+PRIMARY KEY (id));
+
+ CREATE TABLE IF NOT EXISTS animal (
+id INT NOT NULL auto_increment,
+nome VARCHAR(100) NOT NULL,
+especie VARCHAR(100) NOT NULL,
+raça VARCHAR (100) NOT NULL,
+nascimento DATETIME,
+peso DECIMAL,
+PRIMARY KEY (id));
+
+ALTER TABLE animal ADD cor VARCHAR(20);
+
+RENAME TABLE animal TO pet; 
+
+ALTER TABLE tutor DROP email;
+
+DROP TABLE pet;
+
+DROP DATABASE pet_tech;
